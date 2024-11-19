@@ -3,7 +3,7 @@
 ## Overview
 This repository contains a set of models and utilities for **resistor classification** and **image segmentation**. The models are based on Convolutional Neural Networks (CNN) for classification and a U-Net architecture for segmentation, originally sourced from [BradyWynn's GitHub](https://github.com/BradyWynn). This project builds upon BradyWynn’s work with several key improvements aimed at enhancing model performance, flexibility, and usability.
 
-This is an update to the submisson made on [AI Community Internal Kaggle Competition](https://www.kaggle.com/competitions/ai-community-internal-comp) which theoretically should break the 90% accuracy mark.
+This is an update to the submission made on [AI Community Internal Kaggle Competition](https://www.kaggle.com/competitions/ai-community-internal-comp) which theoretically should break the 90% accuracy mark.
 
 ## Improvements and Modifications
 
