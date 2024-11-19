@@ -94,7 +94,11 @@ This is an update to the submisson made on [AI Community Internal Kaggle Competi
 
 Packages:
 pip install torch==1.13.0
+
 pip install numpy==1.23.1
+
 pip install matplotlib==3.5.1
+
 pip install opencv-python==4.5.3
+
 pip install scikit-learn==1.0.2
