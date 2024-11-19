@@ -7,3 +7,4 @@ images.npy
 labels.npy
 masks.npy
 test_set.npy
+submission.csv
