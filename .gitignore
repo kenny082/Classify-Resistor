@@ -1,0 +1,9 @@
+/test
+/train
+/models
+cropped_images.npy
+cropped_test_set.npy
+images.npy
+labels.npy
+masks.npy
+test_set.npy
