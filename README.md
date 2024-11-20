@@ -71,7 +71,7 @@ This is an update to the submission made on [AI Community Internal Kaggle Compet
    - **U-Net for Image Segmentation**
    - **CNN for Resistor Classification**
 
-   The **U-Net class** used in this project was sourced from [jaxony/unet-pytorch](https://github.com/jaxony/unet-pytorch/blob/master/model.py). The CNN model was built specifically for resistor classification tasks.
+   The **U-Net class** used in this project was sourced from [jaxony/unet-pytorch](https://github.com/jaxony/unet-pytorch/blob/master/model.py). The CNN model was built specifically for resistor classification tasks within Stony Brook University Engineering Department. The model sole purpose is for the identification of resistors within the university's engineering department. To reiterate, this is an improvement on BraddWynn's code.
 
 ### 3. **Training Time**:
    - On an **RX 6600** GPU:
