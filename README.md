@@ -3,60 +3,7 @@
 ## Overview
 This repository contains a set of models and utilities for **resistor classification** and **image segmentation**. The models are based on Convolutional Neural Networks (CNN) for classification and a U-Net architecture for segmentation, originally sourced from [BradyWynn's GitHub](https://github.com/BradyWynn). This project builds upon BradyWynn’s work with several key improvements aimed at enhancing model performance, flexibility, and usability.
 
-This is an update to the submission made on [AI Community Internal Kaggle Competition](https://www.kaggle.com/competitions/ai-community-internal-comp) which theoretically should break the 90% accuracy mark.
-
-## Improvements and Modifications
-
-### 1. **Model Architecture Enhancements**:
-   - **Original**: BradyWynn's initial implementation of the models used a basic CNN for classification and U-Net for segmentation.
-   - **Improvement**: 
-     - **Additional Layers and Filters**: In the CNN model, we introduced additional layers and filters to increase the depth and capacity of the network. This allows the model to better extract complex features from images, improving classification accuracy.
-     - **Batch Normalization**: We added **batch normalization** after each convolutional layer. This helps stabilize the training process by normalizing activations, leading to faster convergence and better generalization.
-     - **Dropout**: To prevent overfitting, **dropout** layers were added in the CNN model. This helps improve the model's ability to generalize by randomly disabling neurons during training.
-
-   #### **Why?**
-   - By adding more layers and filters, we aim to increase the capacity of the model to capture intricate patterns from the images.
-   - Batch normalization improves the stability of the network during training, while dropout helps avoid overfitting, making the model more robust when deployed.
-
-### 2. **Improved U-Net Model**:
-   - **Original**: The original U-Net model had a basic encoder-decoder structure for segmentation tasks.
-   - **Improvement**: 
-     - We made the U-Net more flexible by allowing the number of filters, kernel sizes, and depth of the network to be passed as arguments. This allows for greater customization based on the complexity of the segmentation task.
-     - **Residual Connections** were added to improve the flow of gradients through the network. This prevents vanishing gradients and improves the performance of deeper networks.
-     - **Leaky ReLU** activations were introduced in place of traditional ReLU to help with the "dying ReLU" problem, where neurons stop learning entirely.
-
-   #### **Why?**
-   - The flexibility of hyperparameters helps users experiment with different configurations based on their specific needs. It makes the model more adaptable to different image segmentation tasks.
-   - Residual connections help to address the problem of gradient vanishing and exploding, making it easier to train deeper networks.
-   - Leaky ReLU prevents the issue of inactive neurons, ensuring that all neurons continue to learn throughout training.
-
-### 3. **Improved Data Handling and Mask Visualization**:
-   - **Original**: The original code used basic methods for loading and visualizing mask files.
-   - **Improvement**: 
-     - We switched from `os.listdir()` to `glob.glob()` for more flexible file loading. This ensures that only valid files (e.g., `.npy` files) are loaded and simplifies the code.
-     - **Visualization Improvements**: Enhanced the visualization of average masks by using `matplotlib` to display the final mask with colorbars and better labels for clearer results.
-
-   #### **Why?**
-   - `glob` is a more efficient and flexible way to handle file loading with patterns, as it ensures that only the correct files are retrieved (e.g., mask files with specific extensions).
-   - Improved visualization helps users better interpret results, especially in tasks like segmentation, where visual feedback is crucial for debugging and fine-tuning the model.
-
-### 4. **Model Initialization and Weights**:
-   - **Original**: The original code used Xavier initialization for convolutional layers, but linear layers were not consistently initialized.
-   - **Improvement**:
-     - We applied **Xavier initialization** across both convolutional and fully connected layers. This ensures that the weights are better scaled to avoid issues with vanishing/exploding gradients, especially for deeper networks.
-
-   #### **Why?**
-   - Proper weight initialization is key to efficient training. Xavier initialization is well-suited for models with ReLU activations, as it ensures that the variance of the outputs across layers stays relatively stable, leading to faster convergence.
-
-### 5. **Code Modularity and Readability**:
-   - **Original**: The code used a more monolithic approach with all layers defined within a single class.
-   - **Improvement**:
-     - We refactored the code into more modular components. Layers, activation functions, and initialization were split into separate methods or classes where appropriate. This improves code readability and maintainability.
-
-   #### **Why?**
-   - Refactoring the code into smaller, reusable components makes it easier to modify, debug, and extend. It enhances collaboration by allowing others to contribute without being overwhelmed by a monolithic code structure.
-
----
+This is an update to the submission made on [AI Community Internal Kaggle Competition](https://www.kaggle.com/competitions/ai-community-internal-comp) which improve classification accuracy.
 
 ## Dataset and Reproduction Instructions
 
